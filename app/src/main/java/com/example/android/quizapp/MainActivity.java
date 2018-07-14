@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText ed1, ans;
-    TextView tv1, tv3;
+    TextView tv1;
     RadioButton a, b, c, d;
     Button bt;
     CheckBox cb1, cb2, cb3, cb4;
@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         ans.getText();
         answer = ans.toString();
         tv1 = (TextView) findViewById(R.id.ques);
-        tv3 = (TextView) findViewById(R.id.score);
         rg = (RadioGroup) findViewById(R.id.optionGroup);
         LL = (LinearLayout) findViewById(R.id.checkBoxLL);
         editTextLL = (LinearLayout) findViewById(R.id.editTextLL);
@@ -60,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
                 b.setChecked(false);
                 c.setChecked(false);
                 d.setChecked(false);
-                tv3.setText("");
                 a.setEnabled(true);
                 b.setEnabled(true);
                 c.setEnabled(true);
@@ -188,7 +186,8 @@ public class MainActivity extends AppCompatActivity {
                 editTextLL.setVisibility(View.VISIBLE);
                 tv1.setText("7. Which hollywood actress has recieved the most number of oscar nominations");
                 answer = ans.getText().toString();
-                if (cb1.isChecked() && cb3.isChecked()) {
+                answer = answer.trim();
+                if (cb1.isChecked() && cb3.isChecked() && !cb2.isChecked() && !cb4.isChecked()) {
                     s = s + 10;
                     Toast.makeText(this, "Right Answer", Toast.LENGTH_SHORT).show();
                 } else {
@@ -199,14 +198,14 @@ public class MainActivity extends AppCompatActivity {
                 break;
             }
             case 7: {
-                if (answer == "Meryl Streep" || answer == "meryl streep" || answer == "meryl Streep" || answer == "Meryl streep") {
+                String ans7 = "merylstreep";
+                if (ans7.equalsIgnoreCase(answer)) {
                     s = s + 10;
                     Toast.makeText(this, "Right Answer", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "wrong, answer is Meryl Streep", Toast.LENGTH_SHORT).show();
                 }
-
-                tv3.setText(ed1.getText() + "'s final score is " + s);
+                Toast.makeText(this, ed1.getText() + "'s final score is " + s, Toast.LENGTH_LONG).show();
                 bt.setText("Restart");
                 q = 0;
                 break;

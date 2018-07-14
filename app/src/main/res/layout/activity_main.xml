@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#80000000">
+        android:background="@color/background">
 
         <ImageView
             android:id="@+id/logo"
@@ -35,6 +35,8 @@
             android:ems="10"
             android:gravity="center_horizontal"
             android:hint="Name"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:inputType="textPersonName"
             android:padding="10dp"
             android:textSize="30sp" />
@@ -66,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ques"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="20dp"
                 android:text="" />
 
             <RadioButton
@@ -74,7 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/option1"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="20dp"
                 android:text="" />
 
             <RadioButton
@@ -82,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/option2"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="20dp"
                 android:text="" />
 
             <RadioButton
@@ -90,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/option3"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="20dp"
                 android:text="" />
         </RadioGroup>
 
@@ -110,28 +112,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ques"
-                android:layout_marginLeft="50dp" />
+                android:layout_marginLeft="20dp"/>
 
             <CheckBox
                 android:id="@+id/cb2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cb1"
-                android:layout_marginLeft="50dp" />
+                android:layout_marginLeft="20dp"/>
 
             <CheckBox
                 android:id="@+id/cb3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cb2"
-                android:layout_marginLeft="50dp" />
+                android:layout_marginLeft="20dp"/>
 
             <CheckBox
                 android:id="@+id/cb4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cb3"
-                android:layout_marginLeft="50dp" />
+                android:layout_marginLeft="20dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -163,17 +165,6 @@
             android:background="@drawable/layout_bg"
             android:onClick="quiz"
             android:text="Start"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/score"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="33dp"
-            android:layout_marginTop="33dp"
-            android:gravity="center_horizontal"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textColor="@color/white" />
     </RelativeLayout>
 </ScrollView>
